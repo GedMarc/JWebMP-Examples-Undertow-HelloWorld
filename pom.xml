@@ -1,0 +1,66 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>za.co.mmagon</groupId>
+    <artifactId>jwebswing-example-helloworld-undertow</artifactId>
+    <version>1</version>
+    <packaging>jar</packaging>
+
+    <name>Hello World - Undertow</name>
+    <description>An example Hello World Application for Undertow in the JWebSwing Framework
+    </description>
+    <url>https://github.com/GedMarc/JWebSwing-Examples/Undertow/HelloWorld</url>
+
+    <repositories>
+        <repository>
+            <id>jwebswing-snapshot</id>
+            <name>JWebSwingArtifactory-snapshots</name>
+            <url>https://jwebswing.com/artifactory/libs-snapshot</url>
+        </repository>
+    </repositories>
+
+	<issueManagement>
+        <system>Github</system>
+        <url>https://github.com/GedMarc/JWebSwing-Examples/Undertow/HelloWorld/issues</url>
+    </issueManagement>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.jar.version>3.0.2</maven.jar.version>
+        <maven.dependency.version>3.0.1</maven.dependency.version>
+        <maven.javadoc.version>2.10.4</maven.javadoc.version>
+        <maven.source.version>2.1.2</maven.source.version>
+        <maven.resources.version>3.0.2</maven.resources.version>
+        <netbeans.hint.license>gpl30</netbeans.hint.license>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>io.undertow</groupId>
+            <artifactId>undertow-websockets-jsr</artifactId>
+            <version>1.4.21.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>io.undertow</groupId>
+            <artifactId>undertow-core</artifactId>
+            <version>1.4.21.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>io.undertow</groupId>
+            <artifactId>undertow-servlet</artifactId>
+            <version>1.4.21.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>za.co.mmagon</groupId>
+            <artifactId>jwebswing</artifactId>
+            <version>0.12.4.2-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>za.co.mmagon</groupId>
+            <artifactId>jwebswing-undertow</artifactId>
+            <version>0.12.4.2-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+</project>
