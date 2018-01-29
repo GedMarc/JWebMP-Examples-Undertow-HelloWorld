@@ -3,26 +3,28 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>za.co.mmagon</groupId>
-    <artifactId>jwebswing-example-helloworld-undertow</artifactId>
-    <version>1</version>
+    <artifactId>jwebswing-example-atmosphere-undertow</artifactId>
+    <version>0.0.0_0</version>
     <packaging>jar</packaging>
 
-    <name>Hello World - Undertow</name>
-    <description>An example Hello World Application for Undertow in the JWebSwing Framework
+    <name>Atmosphere Push - Undertow</name>
+    <description>An example Atmosphere Push Enabled Application for Undertow in the JWebSwing Framework
+
     </description>
-    <url>https://github.com/GedMarc/JWebSwing-Examples/Undertow/HelloWorld</url>
+    <url>https://github.com/GedMarc/JWebSwing-Examples/Undertow/Atmosphere-Push</url>
 
     <repositories>
         <repository>
-            <id>jwebswing-snapshot</id>
-            <name>JWebSwingArtifactory-snapshots</name>
+            <snapshots/>
+            <id>snapshots</id>
+            <name>libs-snapshot</name>
             <url>https://jwebswing.com/artifactory/libs-snapshot</url>
         </repository>
     </repositories>
 
-	<issueManagement>
+    <issueManagement>
         <system>Github</system>
-        <url>https://github.com/GedMarc/JWebSwing-Examples/Undertow/HelloWorld/issues</url>
+        <url>https://github.com/GedMarc/JWebSwing-Examples/Undertow/Atmosphere-Push/issues</url>
     </issueManagement>
 
     <properties>
@@ -31,11 +33,18 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>za.co.mmagon</groupId>
             <artifactId>jwebswing-undertow</artifactId>
-            <version>LATEST</version>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>za.co.mmagon</groupId>
+            <artifactId>jwebswing-atmospherepush-undertow</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
@@ -43,11 +52,13 @@
             <artifactId>undertow-websockets-jsr</artifactId>
             <version>1.4.21.Final</version>
         </dependency>
+
         <dependency>
             <groupId>io.undertow</groupId>
             <artifactId>undertow-core</artifactId>
             <version>1.4.21.Final</version>
         </dependency>
+
         <dependency>
             <groupId>io.undertow</groupId>
             <artifactId>undertow-servlet</artifactId>
