@@ -2,12 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>za.co.mmagon</groupId>
-    <artifactId>1-test-undertow</artifactId>
+    <groupId>za.co.mmagon.jwebswing.examples.undertow</groupId>
+    <artifactId>helloworld</artifactId>
     <version>0.0.0_0</version>
     <packaging>jar</packaging>
 
-    <name>1. Hello World - Undertow</name>
+    <name>Undertow - Hello World</name>
     <description>An example Hello World Application for Undertow in the JWebSwing Framework
     </description>
     <url>https://github.com/GedMarc/JWebSwing-Examples/Undertow/HelloWorld</url>
@@ -41,12 +41,6 @@
             <groupId>za.co.mmagon</groupId>
             <artifactId>jwebswing</artifactId>
             <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.undertow</groupId>
-            <artifactId>undertow-websockets-jsr</artifactId>
-            <version>1.4.21.Final</version>
         </dependency>
 
         <dependency>
