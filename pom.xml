@@ -3,15 +3,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>za.co.mmagon</groupId>
-    <artifactId>jwebswing-example-atmosphere-undertow</artifactId>
+    <artifactId>1-test-undertow</artifactId>
     <version>0.0.0_0</version>
     <packaging>jar</packaging>
 
-    <name>Atmosphere Push - Undertow</name>
-    <description>An example Atmosphere Push Enabled Application for Undertow in the JWebSwing Framework
-
+    <name>1. Hello World - Undertow</name>
+    <description>An example Hello World Application for Undertow in the JWebSwing Framework
     </description>
-    <url>https://github.com/GedMarc/JWebSwing-Examples/Undertow/Atmosphere-Push</url>
+    <url>https://github.com/GedMarc/JWebSwing-Examples/Undertow/HelloWorld</url>
 
     <repositories>
         <repository>
@@ -24,7 +23,7 @@
 
     <issueManagement>
         <system>Github</system>
-        <url>https://github.com/GedMarc/JWebSwing-Examples/Undertow/Atmosphere-Push/issues</url>
+        <url>https://github.com/GedMarc/JWebSwing-Examples/Undertow/HelloWorld/issues</url>
     </issueManagement>
 
     <properties>
@@ -32,18 +31,15 @@
         <netbeans.hint.license>gpl30</netbeans.hint.license>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+
+        <jwebswing.version>0.0.0_0</jwebswing.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>za.co.mmagon</groupId>
-            <artifactId>jwebswing-undertow</artifactId>
-            <version>${project.version}</version>
-        </dependency>
 
         <dependency>
             <groupId>za.co.mmagon</groupId>
-            <artifactId>jwebswing-atmospherepush-undertow</artifactId>
+            <artifactId>jwebswing</artifactId>
             <version>${project.version}</version>
         </dependency>
 
