@@ -32,7 +32,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <jwebswing.version>0.0.0_0</jwebswing.version>
+        <jwebswing.version>[0.0.0_0,)</jwebswing.version>
     </properties>
 
     <dependencies>
@@ -40,6 +40,13 @@
         <dependency>
             <groupId>za.co.mmagon</groupId>
             <artifactId>jwebswing</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>za.co.mmagon</groupId>
+            <artifactId>jwebswing-undertow</artifactId>
             <version>${project.version}</version>
         </dependency>
 
@@ -53,6 +60,12 @@
             <groupId>io.undertow</groupId>
             <artifactId>undertow-servlet</artifactId>
             <version>1.4.21.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>za.co.mmagon</groupId>
+            <artifactId>jwebswing-undertow</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
     </dependencies>
