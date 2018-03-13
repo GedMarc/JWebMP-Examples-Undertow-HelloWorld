@@ -42,8 +42,7 @@
             <artifactId>jwebswing</artifactId>
             <version>${project.version}</version>
         </dependency>
-
-
+        
         <dependency>
             <groupId>za.co.mmagon</groupId>
             <artifactId>jwebswing-undertow</artifactId>
@@ -60,12 +59,6 @@
             <groupId>io.undertow</groupId>
             <artifactId>undertow-servlet</artifactId>
             <version>1.4.21.Final</version>
-        </dependency>
-
-        <dependency>
-            <groupId>za.co.mmagon</groupId>
-            <artifactId>jwebswing-undertow</artifactId>
-            <version>${project.version}</version>
         </dependency>
 
     </dependencies>
