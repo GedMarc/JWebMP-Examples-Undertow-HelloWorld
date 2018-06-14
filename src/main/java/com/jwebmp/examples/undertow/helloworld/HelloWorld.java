@@ -59,7 +59,8 @@ public class HelloWorld
 		}
 		LogFactory.setDefaultLevel(Level.FINE);
 		Logger.getLogger("")
-		      .addHandler(new ConsoleSTDOutputHandler(true));
+		      .addHandler(ConsoleSTDOutputHandler.getInstance()
+		                                         .setColoured(true));
 
 		DeploymentInfo servletBuilder = Servlets.deployment()
 		                                        .setClassLoader(HelloWorld.class.getClassLoader())
