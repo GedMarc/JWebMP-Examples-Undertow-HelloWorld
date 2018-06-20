@@ -18,6 +18,7 @@ import com.jwebmp.htmlbuilder.css.fonts.FontsCSS;
 import com.jwebmp.htmlbuilder.css.image.ImageCSS;
 import com.jwebmp.htmlbuilder.css.text.TextAlignments;
 import com.jwebmp.htmlbuilder.css.text.TextCSS;
+import com.jwebmp.logger.logging.LogColourFormatter;
 
 @PageConfiguration(url = "/jscss")
 public class HelloWorldCSS
@@ -63,6 +64,7 @@ public class HelloWorldCSS
 	public static void main(String[] args)
 	{
 		HelloWorldCSS page = new HelloWorldCSS();
+		LogColourFormatter.setRenderBlack(false);
 
 		//Directly render the CSS from the Composer
 		CSSComposer comp = new CSSComposer();
