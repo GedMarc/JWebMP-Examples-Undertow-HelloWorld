@@ -19,7 +19,7 @@ package com.jwebmp.examples.undertow.helloworld;
 
 import com.jwebmp.Page;
 import com.jwebmp.base.html.Paragraph;
-import com.jwebmp.guiceinjection.GuiceContext;
+import com.jwebmp.guicedinjection.GuiceContext;
 import com.jwebmp.logger.LogFactory;
 import io.undertow.Undertow;
 import io.undertow.server.HttpHandler;
