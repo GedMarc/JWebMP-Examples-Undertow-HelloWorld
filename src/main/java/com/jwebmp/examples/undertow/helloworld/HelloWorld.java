@@ -26,8 +26,10 @@ import io.undertow.server.HttpHandler;
 import io.undertow.servlet.Servlets;
 import io.undertow.servlet.api.DeploymentInfo;
 import io.undertow.servlet.api.DeploymentManager;
+import io.undertow.servlet.api.ServletContainer;
 
 import javax.servlet.ServletException;
+import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;
 
 public class HelloWorld
@@ -48,16 +50,32 @@ public class HelloWorld
 	 */
 	public static void main(String[] args) throws ServletException
 	{
+		ServletContainer container = io.undertow.servlet.Servlets.defaultContainer();
+		DeploymentInfo di = Servlets.deployment()
+		                            .setClassLoader(HelloWorld.class.getClassLoader())
+		                            .setContextPath("/myApp")
+		                            .setDeploymentName("My Application");
+
+		DeploymentManager manager = container.addDeployment(di); //Add the deployment
+		manager.deploy(); // Initial Deployment by servlets not started yet.
+		HttpHandler handler = manager.start(); // Start the servlet initialization process.
+
+		LogFactory.setLogToConsole(true);
+		LogFactory.getInstance()
+		          .addLogHandler(new ConsoleHandler());
 		LogFactory.configureConsoleColourOutput(Level.FINE);
+
 		DeploymentInfo servletBuilder = Servlets.deployment()
-		                                        .setClassLoader(HelloWorld.class.getClassLoader())
 		                                        .setContextPath("/")
 		                                        .setDeploymentName("helloworld.war");
-		DeploymentManager manager = Servlets.defaultContainer()
+
+		DeploymentManager manager2 = Servlets.defaultContainer()
 		                                    .addDeployment(servletBuilder);
-		manager.deploy();
+
 		GuiceContext.inject();
-		HttpHandler jwebSwingHandler = manager.start();
+		manager2.deploy();
+
+		HttpHandler jwebSwingHandler = manager2.start();
 		Undertow server = Undertow.builder()
 		                          .addHttpListener(6002, "localhost")
 		                          .setHandler(jwebSwingHandler)

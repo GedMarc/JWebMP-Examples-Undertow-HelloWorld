@@ -37,6 +37,26 @@
             <version>${project.version}</version>
             <classifier>${jwebmp.runtime.classifier}</classifier>
         </dependency>
+
+
+        <dependency>
+            <groupId>io.undertow</groupId>
+            <artifactId>undertow-core</artifactId>
+            <version>${io.undertow.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.undertow</groupId>
+            <artifactId>undertow-servlet</artifactId>
+            <version>${io.undertow.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.undertow</groupId>
+            <artifactId>undertow-websockets-jsr</artifactId>
+            <version>${io.undertow.version}</version>
+        </dependency>
+
     </dependencies>
 
     <scm>
