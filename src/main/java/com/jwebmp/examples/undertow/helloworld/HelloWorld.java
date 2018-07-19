@@ -17,19 +17,21 @@
 
 package com.jwebmp.examples.undertow.helloworld;
 
+import com.google.inject.servlet.GuiceFilter;
 import com.jwebmp.Page;
 import com.jwebmp.base.html.Paragraph;
 import com.jwebmp.guicedinjection.GuiceContext;
 import com.jwebmp.logger.LogFactory;
 import io.undertow.Undertow;
 import io.undertow.server.HttpHandler;
+import io.undertow.server.handlers.resource.ClassPathResourceManager;
 import io.undertow.servlet.Servlets;
 import io.undertow.servlet.api.DeploymentInfo;
 import io.undertow.servlet.api.DeploymentManager;
-import io.undertow.servlet.api.ServletContainer;
+import io.undertow.servlet.api.FilterInfo;
 
+import javax.servlet.DispatcherType;
 import javax.servlet.ServletException;
-import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;
 
 public class HelloWorld
@@ -50,27 +52,21 @@ public class HelloWorld
 	 */
 	public static void main(String[] args) throws ServletException
 	{
-		ServletContainer container = io.undertow.servlet.Servlets.defaultContainer();
-		DeploymentInfo di = Servlets.deployment()
-		                            .setClassLoader(HelloWorld.class.getClassLoader())
-		                            .setContextPath("/myApp")
-		                            .setDeploymentName("My Application");
-
-		DeploymentManager manager = container.addDeployment(di); //Add the deployment
-		manager.deploy(); // Initial Deployment by servlets not started yet.
-		HttpHandler handler = manager.start(); // Start the servlet initialization process.
-
 		LogFactory.setLogToConsole(true);
-		LogFactory.getInstance()
-		          .addLogHandler(new ConsoleHandler());
 		LogFactory.configureConsoleColourOutput(Level.FINE);
 
-		DeploymentInfo servletBuilder = Servlets.deployment()
+		DeploymentInfo deploymentInfo = Servlets.deployment()
+		                                        .setClassLoader(HelloWorld.class.getClassLoader())
 		                                        .setContextPath("/")
 		                                        .setDeploymentName("helloworld.war");
 
+		deploymentInfo.addFilter(new FilterInfo("GuiceFilter", GuiceFilter.class).setAsyncSupported(true));
+		deploymentInfo.addFilterUrlMapping("GuiceFilter", "/*", DispatcherType.REQUEST);
+		deploymentInfo.setResourceManager(new ClassPathResourceManager(deploymentInfo.getClassLoader(), "META-INF/resources"));
+
+
 		DeploymentManager manager2 = Servlets.defaultContainer()
-		                                    .addDeployment(servletBuilder);
+		                                     .addDeployment(deploymentInfo);
 
 		GuiceContext.inject();
 		manager2.deploy();
