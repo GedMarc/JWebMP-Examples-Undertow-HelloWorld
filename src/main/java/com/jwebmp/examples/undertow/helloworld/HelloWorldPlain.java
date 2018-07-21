@@ -1,15 +1,14 @@
 package com.jwebmp.examples.undertow.helloworld;
 
-
-import com.jwebmp.Feature;
-import com.jwebmp.Page;
-import com.jwebmp.annotations.PageConfiguration;
-import com.jwebmp.base.html.H3;
-import com.jwebmp.base.html.Paragraph;
-import com.jwebmp.base.references.CSSReference;
-import com.jwebmp.base.references.JavascriptReference;
+import com.jwebmp.core.Feature;
+import com.jwebmp.core.Page;
+import com.jwebmp.core.annotations.PageConfiguration;
+import com.jwebmp.core.base.html.H3;
+import com.jwebmp.core.base.html.Paragraph;
+import com.jwebmp.core.base.references.CSSReference;
+import com.jwebmp.core.base.references.JavascriptReference;
+import com.jwebmp.core.plugins.jquery.JQueryReferencePool;
 import com.jwebmp.logger.LogFactory;
-import com.jwebmp.plugins.jquery.JQueryReferencePool;
 
 import java.util.logging.Level;
 

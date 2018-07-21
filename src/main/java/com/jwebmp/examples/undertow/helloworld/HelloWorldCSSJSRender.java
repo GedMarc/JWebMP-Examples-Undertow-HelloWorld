@@ -1,7 +1,7 @@
 package com.jwebmp.examples.undertow.helloworld;
 
-import com.jwebmp.CSSComponent;
-import com.jwebmp.Feature;
+import com.jwebmp.core.CSSComponent;
+import com.jwebmp.core.Feature;
 
 public class HelloWorldCSSJSRender
 		extends CSSComponent

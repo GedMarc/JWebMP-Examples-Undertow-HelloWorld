@@ -40,7 +40,7 @@
 
         <dependency>
             <groupId>com.jwebmp</groupId>
-            <artifactId>guiced-servlets</artifactId>
+            <artifactId>jwebmp-atmospherepush-undertow</artifactId>
             <version>${project.version}</version>
             <classifier>${jwebmp.runtime.classifier}</classifier>
         </dependency>
@@ -48,6 +48,13 @@
         <dependency>
             <groupId>com.jwebmp</groupId>
             <artifactId>jwebmp-undertow</artifactId>
+            <version>${project.version}</version>
+            <classifier>${jwebmp.runtime.classifier}</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jwebmp</groupId>
+            <artifactId>guiced-servlets</artifactId>
             <version>${project.version}</version>
             <classifier>${jwebmp.runtime.classifier}</classifier>
         </dependency>

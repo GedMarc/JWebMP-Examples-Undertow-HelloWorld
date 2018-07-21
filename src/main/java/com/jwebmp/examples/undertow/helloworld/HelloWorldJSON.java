@@ -1,8 +1,7 @@
 package com.jwebmp.examples.undertow.helloworld;
 
-
-import com.jwebmp.Page;
-import com.jwebmp.annotations.PageConfiguration;
+import com.jwebmp.core.Page;
+import com.jwebmp.core.annotations.PageConfiguration;
 
 @PageConfiguration(url = "/jsontest")
 public class HelloWorldJSON

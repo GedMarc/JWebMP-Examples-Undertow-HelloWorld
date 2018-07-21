@@ -1,9 +1,8 @@
 package com.jwebmp.examples.undertow.helloworld;
 
-
-import com.jwebmp.Page;
-import com.jwebmp.annotations.PageConfiguration;
-import com.jwebmp.base.html.Paragraph;
+import com.jwebmp.core.Page;
+import com.jwebmp.core.annotations.PageConfiguration;
+import com.jwebmp.core.base.html.Paragraph;
 import com.jwebmp.logger.LogFactory;
 import com.jwebmp.logger.logging.LogColourFormatter;
 

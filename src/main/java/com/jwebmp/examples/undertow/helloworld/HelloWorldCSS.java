@@ -1,23 +1,22 @@
 package com.jwebmp.examples.undertow.helloworld;
 
-
-import com.jwebmp.Page;
-import com.jwebmp.annotations.PageConfiguration;
-import com.jwebmp.base.html.H3;
-import com.jwebmp.base.html.Span;
-import com.jwebmp.htmlbuilder.css.backgrounds.BackgroundBlendMode;
-import com.jwebmp.htmlbuilder.css.backgrounds.BackgroundCSS;
-import com.jwebmp.htmlbuilder.css.borders.BorderCSS;
-import com.jwebmp.htmlbuilder.css.colours.ColourNames;
-import com.jwebmp.htmlbuilder.css.composer.CSSComposer;
-import com.jwebmp.htmlbuilder.css.displays.DisplayCSS;
-import com.jwebmp.htmlbuilder.css.displays.Displays;
-import com.jwebmp.htmlbuilder.css.enumarations.BorderStyles;
-import com.jwebmp.htmlbuilder.css.fonts.FontStyles;
-import com.jwebmp.htmlbuilder.css.fonts.FontsCSS;
-import com.jwebmp.htmlbuilder.css.image.ImageCSS;
-import com.jwebmp.htmlbuilder.css.text.TextAlignments;
-import com.jwebmp.htmlbuilder.css.text.TextCSS;
+import com.jwebmp.core.Page;
+import com.jwebmp.core.annotations.PageConfiguration;
+import com.jwebmp.core.base.html.H3;
+import com.jwebmp.core.base.html.Span;
+import com.jwebmp.core.htmlbuilder.css.backgrounds.BackgroundBlendMode;
+import com.jwebmp.core.htmlbuilder.css.backgrounds.BackgroundCSS;
+import com.jwebmp.core.htmlbuilder.css.borders.BorderCSS;
+import com.jwebmp.core.htmlbuilder.css.colours.ColourNames;
+import com.jwebmp.core.htmlbuilder.css.composer.CSSComposer;
+import com.jwebmp.core.htmlbuilder.css.displays.DisplayCSS;
+import com.jwebmp.core.htmlbuilder.css.displays.Displays;
+import com.jwebmp.core.htmlbuilder.css.enumarations.BorderStyles;
+import com.jwebmp.core.htmlbuilder.css.fonts.FontStyles;
+import com.jwebmp.core.htmlbuilder.css.fonts.FontsCSS;
+import com.jwebmp.core.htmlbuilder.css.image.ImageCSS;
+import com.jwebmp.core.htmlbuilder.css.text.TextAlignments;
+import com.jwebmp.core.htmlbuilder.css.text.TextCSS;
 import com.jwebmp.logger.logging.LogColourFormatter;
 
 @PageConfiguration(url = "/jscss")

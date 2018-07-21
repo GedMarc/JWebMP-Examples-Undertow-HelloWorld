@@ -18,10 +18,11 @@
 package com.jwebmp.examples.undertow.helloworld;
 
 import com.google.inject.servlet.GuiceFilter;
-import com.jwebmp.Page;
-import com.jwebmp.base.html.Paragraph;
+import com.jwebmp.core.Page;
+import com.jwebmp.core.base.html.Paragraph;
 import com.jwebmp.guicedinjection.GuiceContext;
 import com.jwebmp.logger.LogFactory;
+import com.jwebmp.logger.logging.LogColourFormatter;
 import io.undertow.Undertow;
 import io.undertow.server.HttpHandler;
 import io.undertow.server.handlers.resource.ClassPathResourceManager;
@@ -54,6 +55,7 @@ public class HelloWorld
 	{
 		LogFactory.setLogToConsole(true);
 		LogFactory.configureConsoleColourOutput(Level.FINE);
+		LogColourFormatter.setRenderBlack(false);
 
 		DeploymentInfo deploymentInfo = Servlets.deployment()
 		                                        .setClassLoader(HelloWorld.class.getClassLoader())
@@ -77,6 +79,7 @@ public class HelloWorld
 		                          .setHandler(jwebSwingHandler)
 		                          .build();
 		server.start();
-
+		LogFactory.getLog("Program")
+		          .info("Started");
 	}
 }
