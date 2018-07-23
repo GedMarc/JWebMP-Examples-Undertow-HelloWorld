@@ -38,6 +38,14 @@
             <classifier>${jwebmp.runtime.classifier}</classifier>
         </dependency>
 
+
+        <dependency>
+            <groupId>com.jwebmp</groupId>
+            <artifactId>jwebmp-atmosphere</artifactId>
+            <version>${project.version}</version>
+            <classifier>${jwebmp.runtime.classifier}</classifier>
+        </dependency>
+
         <dependency>
             <groupId>com.jwebmp</groupId>
             <artifactId>jwebmp-atmospherepush-undertow</artifactId>

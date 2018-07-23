@@ -66,7 +66,6 @@ public class HelloWorld
 		deploymentInfo.addFilterUrlMapping("GuiceFilter", "/*", DispatcherType.REQUEST);
 		deploymentInfo.setResourceManager(new ClassPathResourceManager(deploymentInfo.getClassLoader(), "META-INF/resources"));
 
-
 		DeploymentManager manager2 = Servlets.defaultContainer()
 		                                     .addDeployment(deploymentInfo);
 
