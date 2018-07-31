@@ -62,10 +62,6 @@ public class HelloWorld
 		                                        .setContextPath("/")
 		                                        .setDeploymentName("helloworld.war");
 
-		deploymentInfo.addFilter(new FilterInfo("GuiceFilter", GuiceFilter.class).setAsyncSupported(true));
-		deploymentInfo.addFilterUrlMapping("GuiceFilter", "/*", DispatcherType.REQUEST);
-		deploymentInfo.setResourceManager(new ClassPathResourceManager(deploymentInfo.getClassLoader(), "META-INF/resources"));
-
 		DeploymentManager manager2 = Servlets.defaultContainer()
 		                                     .addDeployment(deploymentInfo);
 
