@@ -19,7 +19,8 @@ import com.jwebmp.core.htmlbuilder.css.text.TextAlignments;
 import com.jwebmp.core.htmlbuilder.css.text.TextCSS;
 import com.jwebmp.logger.logging.LogColourFormatter;
 
-@PageConfiguration(url = "/jscss")
+@PageConfiguration(url = "/jscss",
+		ignore = true)
 public class HelloWorldCSS
 		extends Page
 {

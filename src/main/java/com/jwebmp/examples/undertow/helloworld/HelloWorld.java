@@ -17,21 +17,14 @@
 
 package com.jwebmp.examples.undertow.helloworld;
 
-import com.google.inject.servlet.GuiceFilter;
 import com.jwebmp.core.Page;
+import com.jwebmp.core.base.html.Link;
 import com.jwebmp.core.base.html.Paragraph;
-import com.jwebmp.guicedinjection.GuiceContext;
+import com.jwebmp.core.base.html.Strong;
 import com.jwebmp.logger.LogFactory;
 import com.jwebmp.logger.logging.LogColourFormatter;
-import io.undertow.Undertow;
-import io.undertow.server.HttpHandler;
-import io.undertow.server.handlers.resource.ClassPathResourceManager;
-import io.undertow.servlet.Servlets;
-import io.undertow.servlet.api.DeploymentInfo;
-import io.undertow.servlet.api.DeploymentManager;
-import io.undertow.servlet.api.FilterInfo;
+import com.jwebmp.undertow.JWebMPUndertow;
 
-import javax.servlet.DispatcherType;
 import javax.servlet.ServletException;
 import java.util.logging.Level;
 
@@ -42,6 +35,9 @@ public class HelloWorld
 	{
 		super("Hello World!");
 		add(new Paragraph("Hello World"));
+		add(new Paragraph("Hello World 222"));
+		add(new Link<>("Click Here", "_blank").setText("Custom Link"));
+		add(new Strong("This is bold"));
 	}
 
 	/**
@@ -51,12 +47,17 @@ public class HelloWorld
 	 *
 	 * @throws ServletException
 	 */
-	public static void main(String[] args) throws ServletException
+	public static void main(String[] args) throws Exception
 	{
 		LogFactory.setLogToConsole(true);
-		LogFactory.configureConsoleColourOutput(Level.FINE);
+		LogFactory.configureConsoleColourOutput(Level.INFO);
 		LogColourFormatter.setRenderBlack(false);
+		JWebMPUndertow.boot("localhost", 6002);
+		LogFactory.getLog("Program")
+		          .info("Started");
 
+		//Which is a shortcut for :
+		/*
 		DeploymentInfo deploymentInfo = Servlets.deployment()
 		                                        .setClassLoader(HelloWorld.class.getClassLoader())
 		                                        .setContextPath("/")
@@ -74,7 +75,6 @@ public class HelloWorld
 		                          .setHandler(jwebSwingHandler)
 		                          .build();
 		server.start();
-		LogFactory.getLog("Program")
-		          .info("Started");
+		*/
 	}
 }

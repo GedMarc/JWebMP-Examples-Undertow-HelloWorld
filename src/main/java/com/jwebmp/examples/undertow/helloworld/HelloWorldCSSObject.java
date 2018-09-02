@@ -8,7 +8,8 @@ import com.jwebmp.logger.logging.LogColourFormatter;
 
 import java.util.logging.Level;
 
-@PageConfiguration(url = "/jscssobj")
+@PageConfiguration(url = "/jscssobj",
+		ignore = true)
 public class HelloWorldCSSObject
 		extends Page
 {

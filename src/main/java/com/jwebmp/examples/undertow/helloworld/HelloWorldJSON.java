@@ -3,7 +3,8 @@ package com.jwebmp.examples.undertow.helloworld;
 import com.jwebmp.core.Page;
 import com.jwebmp.core.annotations.PageConfiguration;
 
-@PageConfiguration(url = "/jsontest")
+@PageConfiguration(url = "/jsontest",
+		ignore = true)
 public class HelloWorldJSON
 		extends Page
 {

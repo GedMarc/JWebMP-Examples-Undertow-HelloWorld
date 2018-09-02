@@ -18,6 +18,7 @@ module com.jwebmp.examples.undertow.helloworld {
 	requires com.jwebmp.logmaster;
 	requires com.jwebmp.core;
 	requires com.google.guice.extensions.servlet;
+	requires com.jwebmp.undertow;
 
 	provides IPage with HelloWorld, HelloWorldCSS, HelloWorldCSSObject, HelloWorldPlain;
 }

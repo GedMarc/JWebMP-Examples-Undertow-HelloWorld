@@ -12,7 +12,8 @@ import com.jwebmp.logger.LogFactory;
 
 import java.util.logging.Level;
 
-@PageConfiguration(url = "/jstest")
+@PageConfiguration(url = "/jstest",
+		ignore = true)
 public class HelloWorldPlain
 		extends Page
 {
