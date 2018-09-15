@@ -57,6 +57,7 @@ public class HelloWorld
 		          .info("Started");
 
 		//Which is a shortcut for :
+
 		/*
 		DeploymentInfo deploymentInfo = Servlets.deployment()
 		                                        .setClassLoader(HelloWorld.class.getClassLoader())
