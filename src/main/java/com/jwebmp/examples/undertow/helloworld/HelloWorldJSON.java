@@ -11,8 +11,8 @@ public class HelloWorldJSON
 	public HelloWorldJSON()
 	{
 		super();
-		getPageFields().setAuthor("GedMarc");
-		getPageFields().setKeywords("Some Random Keywords");
+		getOptions().setAuthor("GedMarc");
+		getOptions().setKeywords("Some Random Keywords");
 	}
 
 	public static void main(String[] args)
