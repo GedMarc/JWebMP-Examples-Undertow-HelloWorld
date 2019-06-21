@@ -23,7 +23,7 @@ import com.jwebmp.core.base.html.Paragraph;
 import com.jwebmp.core.base.html.Strong;
 import com.jwebmp.logger.LogFactory;
 import com.jwebmp.logger.logging.LogColourFormatter;
-import com.jwebmp.undertow.JWebMPUndertow;
+import com.jwebmp.undertow.GuicedUndertow;
 
 import javax.servlet.ServletException;
 import java.util.logging.Level;
@@ -52,7 +52,7 @@ public class HelloWorld
 		LogFactory.setLogToConsole(true);
 		LogFactory.configureConsoleColourOutput(Level.INFO);
 		LogColourFormatter.setRenderBlack(false);
-		JWebMPUndertow.boot("localhost", 6002);
+		GuicedUndertow.boot("localhost", 6002);
 		LogFactory.getLog("Program")
 		          .info("Started");
 
