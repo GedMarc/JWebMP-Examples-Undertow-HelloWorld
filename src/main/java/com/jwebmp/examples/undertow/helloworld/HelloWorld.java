@@ -50,7 +50,7 @@ public class HelloWorld
 	public static void main(String[] args) throws Exception
 	{
 		LogFactory.setLogToConsole(true);
-		LogFactory.configureConsoleColourOutput(Level.INFO);
+		LogFactory.configureConsoleColourOutput(Level.FINE);
 		LogColourFormatter.setRenderBlack(false);
 		GuicedUndertow.boot("localhost", 6002);
 		LogFactory.getLog("Program")
