@@ -24,6 +24,7 @@ import com.jwebmp.core.base.html.Strong;
 import com.jwebmp.logger.LogFactory;
 import com.jwebmp.logger.logging.LogColourFormatter;
 import com.jwebmp.undertow.GuicedUndertow;
+import io.undertow.Undertow;
 
 import javax.servlet.ServletException;
 import java.util.logging.Level;
@@ -49,33 +50,10 @@ public class HelloWorld
 	 */
 	public static void main(String[] args) throws Exception
 	{
-		LogFactory.setLogToConsole(true);
 		LogFactory.configureConsoleColourOutput(Level.FINE);
-		LogColourFormatter.setRenderBlack(false);
-		GuicedUndertow.boot("localhost", 6002);
+		Undertow ud = GuicedUndertow.boot("localhost", 9999);
+		System.out.println("done");
 		LogFactory.getLog("Program")
 		          .info("Started");
-
-		//Which is a shortcut for :
-
-		/*
-		DeploymentInfo deploymentInfo = Servlets.deployment()
-		                                        .setClassLoader(HelloWorld.class.getClassLoader())
-		                                        .setContextPath("/")
-		                                        .setDeploymentName("helloworld.war");
-
-		DeploymentManager manager2 = Servlets.defaultContainer()
-		                                     .addDeployment(deploymentInfo);
-
-		GuiceContext.inject();
-		manager2.deploy();
-
-		HttpHandler jwebSwingHandler = manager2.start();
-		Undertow server = Undertow.builder()
-		                          .addHttpListener(6002, "localhost")
-		                          .setHandler(jwebSwingHandler)
-		                          .build();
-		server.start();
-		*/
 	}
 }
