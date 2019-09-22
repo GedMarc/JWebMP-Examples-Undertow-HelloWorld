@@ -26,20 +26,20 @@
     <dependencies>
         <dependency>
             <groupId>com.jwebmp.core</groupId>
-            <artifactId>jwebmp-core</artifactId>
-        </dependency>
+            <artifactId>jwebmp-core</artifactId><type>jar</type>
+            </dependency>
 
         <dependency>
             <groupId>com.jwebmp.guicedee.servlets</groupId>
-            <artifactId>guiced-undertow</artifactId>
-        </dependency>
+            <artifactId>guiced-undertow</artifactId><type>jar</type>
+            </dependency>
 
 
         <dependency>
-            <groupId>com.jwebmp.thirdparty</groupId>
+            <groupId>com.jwebmp.jpms.thirdparty</groupId>
             <artifactId>javax.faces</artifactId>
             <type>jar</type>
-        </dependency>
+            </dependency>
 
 
     </dependencies>
