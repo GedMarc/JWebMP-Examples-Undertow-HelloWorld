@@ -8,7 +8,7 @@ import com.jwebmp.core.base.html.Paragraph;
 import com.jwebmp.core.base.references.CSSReference;
 import com.jwebmp.core.base.references.JavascriptReference;
 import com.jwebmp.core.plugins.jquery.JQueryReferencePool;
-import com.jwebmp.logger.LogFactory;
+import com.guicedee.logger.LogFactory;
 
 import java.util.logging.Level;
 

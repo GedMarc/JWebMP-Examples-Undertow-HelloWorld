@@ -17,7 +17,7 @@ import com.jwebmp.core.htmlbuilder.css.fonts.FontsCSS;
 import com.jwebmp.core.htmlbuilder.css.image.ImageCSS;
 import com.jwebmp.core.htmlbuilder.css.text.TextAlignments;
 import com.jwebmp.core.htmlbuilder.css.text.TextCSS;
-import com.jwebmp.logger.logging.LogColourFormatter;
+import com.guicedee.logger.logging.LogColourFormatter;
 
 @PageConfiguration(url = "/jscss",
 		ignore = true)

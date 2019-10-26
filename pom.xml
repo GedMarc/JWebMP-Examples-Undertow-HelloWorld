@@ -36,7 +36,7 @@
 
 
         <dependency>
-            <groupId>com.jwebmp.jpms.thirdparty</groupId>
+             <groupId>com.guicedee.services</groupId>
             <artifactId>javax.faces</artifactId>
             <type>jar</type>
             </dependency>
