@@ -17,13 +17,13 @@
 
 package com.jwebmp.examples.undertow.helloworld;
 
+import com.guicedee.guicedservlets.undertow.GuicedUndertow;
 import com.jwebmp.core.Page;
 import com.jwebmp.core.base.html.Link;
 import com.jwebmp.core.base.html.Paragraph;
 import com.jwebmp.core.base.html.Strong;
 import com.guicedee.logger.LogFactory;
-import com.guicedee.logger.logging.LogColourFormatter;
-import com.jwebmp.undertow.GuicedUndertow;
+
 import io.undertow.Undertow;
 
 import javax.servlet.ServletException;
