@@ -26,7 +26,7 @@ import com.guicedee.logger.LogFactory;
 
 import io.undertow.Undertow;
 
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletException;
 import java.util.logging.Level;
 
 public class HelloWorld
