@@ -3,7 +3,7 @@ package com.jwebmp.examples.undertow.helloworld;
 import com.jwebmp.core.Page;
 import com.jwebmp.core.annotations.PageConfiguration;
 import com.jwebmp.core.base.html.Paragraph;
-import com.guicedee.logger.LogFactory;
+
 import com.guicedee.logger.logging.LogColourFormatter;
 
 import java.util.logging.Level;
